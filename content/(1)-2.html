@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,24 +142,16 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='Replit.html'>Next</a> >> Replit<br /><h1>cmsimde</h1>
-<p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
-<p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
-<p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
-<p><span style="background-color: #ccffcc;">Config</span> - Configure Site - 編輯頁面標題與管理者密碼.</p>
-<p><span style="background-color: #ccffcc;">Search</span> - 動態頁面內容的關鍵字搜尋.</p>
-<p><span style="background-color: #ccffcc;">IUpload</span> - Image file Upload - 圖檔的上傳功能, 可以上傳 jpg, png 與 gif 檔案, 其中若在手機上傳圖檔, 系統會自動將圖片檔案縮小為 800x800 大小.</p>
-<p><span style="background-color: #ccffcc;">IList</span> - Image file List - 列出可以直接在頁面編輯模式中引用的圖片檔案.</p>
-<p><span style="background-color: #ccffcc;">FUpload</span> - File Upload - 一般檔案的上傳功能, 目前可以上傳的檔案副檔名包括 'jpg', 'png', 'gif', '7z', 'pdf', 'zip', 'ttt', 'stl', 'txt', 'html', 'mp4' 等, 使用者可以自行修改.</p>
-<p><span style="background-color: #ccffcc;">FList</span> - File List - 列出可以直接在頁面編輯模式中引用的上傳檔案.</p>
-<p><span style="background-color: #ccffcc;">Logout</span> - 登出頁面編輯模式.</p>
-<p><span style="background-color: #ccffcc;">Convert</span> - 將動態網站中位於 config/content.htm 檔案, 透過分頁設定轉為 content 目錄中的靜態網頁.</p>
-<p><span style="background-color: #ccffcc;">acp</span> - git add, git commit 與 git push, 通常只有在 localhost 或自架主機上利用網頁表單協助將倉儲改版內容推向 Github 倉儲.</p>
-<p><span style="background-color: #ccffcc;">SStatic</span> - Start Static Site - 利用 Python 啟動網站伺服功能, 可以讓使用者檢查轉檔後的靜態網站內容.</p>
-<p><span style="background-color: #ccffcc;">RStatic</span> - Replit Static Site URL - 僅用於 Replit 模式, 當使用者按下 SStatic 後, 可以按下 RStatic 進入當下尚未推向 Github Pages 的靜態網站.</p>
-<p><span style="background-color: #ccffcc;">80</span> - 由 init.py 中 static_port 所決定的連結字串, 一般不使用 80, 只有在 Replit 中為了與動態網站共用 port, 才特別設為 80.</p>
+    <div id="tipue_search_content">question2 << <a href='question2.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>(1)-2</h1>
+<div class="flex flex-grow flex-col max-w-full">
+<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="user" data-message-id="aaa2da3e-e2dc-4704-a2ae-3bd54259198f" dir="auto">
+<div class="">假如要在 Windows 實際 demo git client 與 git server, 該如何進行?</div>
+</div>
+</div>
+<div class="mt-1 flex gap-3 empty:hidden juice:justify-end">A:</div>
+<div class="mt-1 flex gap-3 empty:hidden juice:justify-end">要在 Windows 上演示 Git 客户端与 Git 服务器，你可以按照以下步骤进行：<br/><br/>**设置 Git 服务器：**<br/><br/>1. **安装 Git：**首先，在你选择的 Windows 服务器上安装 Git。你可以从 Git 官方网站（https://git-scm.com/）下载并安装 Git for Windows。<br/><br/>2. **设置 Git 仓库：**选择一个目录作为 Git 仓库，并通过命令行进入该目录。<br/><br/>3. **初始化仓库：**使用以下命令初始化 Git 仓库：<br/><br/> ```<br/> git init --bare<br/> ```<br/><br/> 这将在选定目录中创建一个裸仓库，用于作为 Git 服务器。<br/><br/>4. **设置 SSH 访问（可选）：**如果你计划使用 SSH 进行访问和认证，你需要确保在服务器上配置了 SSH 服务，并在客户端生成 SSH 密钥对并将公钥添加到服务器上的授权文件中。<br/><br/>**设置 Git 客户端：**<br/><br/>1. **安装 Git：**在你选择的 Windows 客户端上安装 Git for Windows，同样可以从 Git 官方网站下载并安装。<br/><br/>2. **配置全局用户信息：**在命令行或 Git Bash 中，使用以下命令配置全局用户信息：<br/><br/> ```<br/> git config --global user.name "Your Name"<br/> git config --global user.email "your.email@example.com"<br/> ```<br/><br/> 这将设置全局的用户名和邮箱，用于在提交时标识作者信息。<br/><br/>3. **克隆仓库：**在你选择的目录中，使用以下命令克隆 Git 服务器上的仓库：<br/><br/> ```<br/> git clone username@server_ip:/path/to/repository<br/> ```<br/><br/> 其中 `username` 是 Git 服务器的用户名，`server_ip` 是服务器的 IP 地址，`/path/to/repository` 是服务器上仓库的路径。<br/><br/>4. **进行更改：**在克隆的本地仓库中进行更改，并使用以下命令提交更改：<br/><br/> ```<br/> git add .<br/> git commit -m "Commit message"<br/> ```<br/><br/>5. **推送更改：**将本地更改推送到 Git 服务器：<br/><br/> ```<br/> git push origin master<br/> ```<br/><br/> 这将把本地的 `master` 分支推送到远程仓库。<br/><br/>通过以上步骤，你就可以在 Windows 上演示 Git 客户端与 Git 服务器的基本使用。记得根据实际情况进行配置和调整，例如使用 HTTPS 或 SSH 访问，以及确保适当的权限和认证方式。</div>
 <p></p>
-<br />About << <a href='About.html'>Previous</a> <a href='Replit.html'>Next</a> >> Replit</div>
+<br />question2 << <a href='question2.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
 
     <!-- footer -->
       <div class="container">
