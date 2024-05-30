@@ -179,9 +179,26 @@ os.system("chmod og-rwx /home/runner/.ssh/id_rsa")
 <div class="mt-1 flex gap-3 empty:hidden juice:justify-end">A:</div>
 <div class="mt-1 flex gap-3 empty:hidden juice:justify-end">要在 Windows 上演示 Git 客户端与 Git 服务器，你可以按照以下步骤进行：<br/><br/>**设置 Git 服务器：**<br/><br/>1. **安装 Git：**首先，在你选择的 Windows 服务器上安装 Git。你可以从 Git 官方网站（https://git-scm.com/）下载并安装 Git for Windows。<br/><br/>2. **设置 Git 仓库：**选择一个目录作为 Git 仓库，并通过命令行进入该目录。<br/><br/>3. **初始化仓库：**使用以下命令初始化 Git 仓库：<br/><br/> ```<br/> git init --bare<br/> ```<br/><br/> 这将在选定目录中创建一个裸仓库，用于作为 Git 服务器。<br/><br/>4. **设置 SSH 访问（可选）：**如果你计划使用 SSH 进行访问和认证，你需要确保在服务器上配置了 SSH 服务，并在客户端生成 SSH 密钥对并将公钥添加到服务器上的授权文件中。<br/><br/>**设置 Git 客户端：**<br/><br/>1. **安装 Git：**在你选择的 Windows 客户端上安装 Git for Windows，同样可以从 Git 官方网站下载并安装。<br/><br/>2. **配置全局用户信息：**在命令行或 Git Bash 中，使用以下命令配置全局用户信息：<br/><br/> ```<br/> git config --global user.name "Your Name"<br/> git config --global user.email "your.email@example.com"<br/> ```<br/><br/> 这将设置全局的用户名和邮箱，用于在提交时标识作者信息。<br/><br/>3. **克隆仓库：**在你选择的目录中，使用以下命令克隆 Git 服务器上的仓库：<br/><br/> ```<br/> git clone username@server_ip:/path/to/repository<br/> ```<br/><br/> 其中 `username` 是 Git 服务器的用户名，`server_ip` 是服务器的 IP 地址，`/path/to/repository` 是服务器上仓库的路径。<br/><br/>4. **进行更改：**在克隆的本地仓库中进行更改，并使用以下命令提交更改：<br/><br/> ```<br/> git add .<br/> git commit -m "Commit message"<br/> ```<br/><br/>5. **推送更改：**将本地更改推送到 Git 服务器：<br/><br/> ```<br/> git push origin master<br/> ```<br/><br/> 这将把本地的 `master` 分支推送到远程仓库。<br/><br/>通过以上步骤，你就可以在 Windows 上演示 Git 客户端与 Git 服务器的基本使用。记得根据实际情况进行配置和调整，例如使用 HTTPS 或 SSH 访问，以及确保适当的权限和认证方式。</div>
 <h2>W7-W8</h2>
-<h2>W10</h2>
-<h2>W11</h2>
-<h2>W13</h2>
+<p>期中成績登記，並輸入自己想要的理想分數。</p>
+<p>第八週上課內容</p>
+<p>1.了解教育的本質、意義</p>
+<p>2.如何把影片嵌入自己的個人網站上</p><h2>W10</h2>
+<p>在mdewcm2024/1astud-site新增各組的心得，並解決衝突的問題</p>
+<p>並使用超文件到網誌中</p>
+<p>介紹acp的功用</p>
+<p><span>git add .</span></p>
+<p><span>git commit -m "$1" --author="$2"</span></p>
+<p><span>git push</span></p><h2>W11</h2>
+<p>面 demo 在同一頁面下入多個線上 Ace 編輯器與執行按鈕 (<a href="/get_page/W11/practice_html.txt">practice_html.txt</a>動態頁面超文件).</p>
+<p><a href="/get_page/W11/practice_html.txt">practice_html.txt</a>動態頁面超文件應該可以在啟動 Brython 時, 設定將 .py 檔案放入 downloads/py 目錄中引用.</p>
+<p>亦即將所有對應的 html 也使用 Brython 產生, 然後寫為<span> </span><a href="/get_page/W11/class">class</a><span> </span>後, 在範例導入時透過<span> </span><a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">instance</a><span> </span>引用</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 啟動 Brython --&gt;
+&lt;script&gt;
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+&lt;/script&gt;</pre>
+<p><span> </span></p><h2>W13</h2>
 <p></p>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
