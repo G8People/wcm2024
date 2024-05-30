@@ -39,21 +39,34 @@
 <h1>W6</h1>
 <h2>question1</h2>
 <h3>(1)</h3>
-<p><span>git 的發展歷史?</span></p>
+<div class="flex flex-grow flex-col max-w-full">
+<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="user" data-message-id="aaa2da3e-e2dc-4704-a2ae-3bd54259198f" dir="auto">
+<div class="">假如要在 Windows 實際 demo git client 與 git server, 該如何進行?</div>
+</div>
+</div>
 <p>A:</p>
-<p>Git 是一个分布式版本控制系统，最初由 Linus Torvalds 于2005年创建。它的发展历史可以追溯到 Linux 内核的开发过程中。下面是 Git 的主要发展历程：</p>
-<p>1. **2005年：诞生** <br/> Git 由 Linus Torvalds 开始编写，最初是为了辅助 Linux 内核的开发而创建的。他对现有版本控制系统的不满促使了 Git 的诞生。</p>
-<p>2. **2005年：首个公开版本** <br/> Git 的首个公开版本发布，随后吸引了许多开发者的关注，并开始快速发展。</p>
-<p>3. **2006年：引入 GitHub** <br/> GitHub 是一个基于 Git 的代码托管平台，于2008年成立。它极大地推动了 Git 的普及和发展，使得 Git 成为了许多开源和私有项目的首选版本控制系统。</p>
-<p>4. **2007年：Git 1.5发布** <br/> Git 1.5 版本发布，引入了一些重要的功能和改进，例如增强了对 Windows 平台的支持。</p>
-<p>5. **2009年：Git 1.6发布** <br/> Git 1.6 版本带来了更多的功能和改进，包括改进的日志格式、增强的性能和更好的分支管理。</p>
-<p>6. **2012年：Git 1.8发布** <br/> Git 1.8 版本引入了子模块（submodules）的概念，这使得管理依赖于其他仓库的项目变得更加容易。</p>
-<p>7. **2014年：Git 2.0发布** <br/> Git 2.0 版本带来了一些重大的改变，包括更简洁的输出格式和一些命令行选项的变化。</p>
-<p>8. **2016年：Git 2.10发布** <br/> Git 2.10 版本引入了多种改进，包括更好的性能、增强的子模块支持和更新的文档。</p>
-<p>9. **2018年：Git 2.19发布** <br/> Git 2.19 版本带来了更多的性能改进、新的功能和 bug 修复。</p>
-<p>10. **2020年：Git 2.27发布** <br/> Git 2.27 版本引入了一些新的特性，包括改进的子模块更新策略、新的 rebase 选项等。</p>
-<p>这只是 Git 发展历史的一个简要概述，Git 的发展一直在不断地推进，以满足不断变化的开发需求。</p>
-<h3>(2)</h3>
+<p>要在 Windows 上演示 Git 客户端与 Git 服务器，你可以按照以下步骤进行：</p>
+<p>**设置 Git 服务器：**</p>
+<p>1. **安装 Git：**首先，在你选择的 Windows 服务器上安装 Git。你可以从 Git 官方网站（https://git-scm.com/）下载并安装 Git for Windows。</p>
+<p>2. **设置 Git 仓库：**选择一个目录作为 Git 仓库，并通过命令行进入该目录。</p>
+<p>3. **初始化仓库：**使用以下命令初始化 Git 仓库：</p>
+<p>```<br/> git init --bare<br/> ```</p>
+<p>这将在选定目录中创建一个裸仓库，用于作为 Git 服务器。</p>
+<p>4. **设置 SSH 访问（可选）：**如果你计划使用 SSH 进行访问和认证，你需要确保在服务器上配置了 SSH 服务，并在客户端生成 SSH 密钥对并将公钥添加到服务器上的授权文件中。</p>
+<p>**设置 Git 客户端：**</p>
+<p>1. **安装 Git：**在你选择的 Windows 客户端上安装 Git for Windows，同样可以从 Git 官方网站下载并安装。</p>
+<p>2. **配置全局用户信息：**在命令行或 Git Bash 中，使用以下命令配置全局用户信息：</p>
+<p>```<br/> git config --global user.name "Your Name"<br/> git config --global user.email "your.email@example.com"<br/> ```</p>
+<p>这将设置全局的用户名和邮箱，用于在提交时标识作者信息。</p>
+<p>3. **克隆仓库：**在你选择的目录中，使用以下命令克隆 Git 服务器上的仓库：</p>
+<p>```<br/> git clone username@server_ip:/path/to/repository<br/> ```</p>
+<p>其中 `username` 是 Git 服务器的用户名，`server_ip` 是服务器的 IP 地址，`/path/to/repository` 是服务器上仓库的路径。</p>
+<p>4. **进行更改：**在克隆的本地仓库中进行更改，并使用以下命令提交更改：</p>
+<p>```<br/> git add .<br/> git commit -m "Commit message"<br/> ```</p>
+<p>5. **推送更改：**将本地更改推送到 Git 服务器：</p>
+<p>```<br/> git push origin master<br/> ```</p>
+<p>这将把本地的 `master` 分支推送到远程仓库。</p>
+<p>通过以上步骤，你就可以在 Windows 上演示 Git 客户端与 Git 服务器的基本使用。记得根据实际情况进行配置和调整，例如使用 HTTPS 或 SSH 访问，以及确保适当的权限和认证方式。</p><h3>(2)</h3>
 <p><span>git創作人的相關履歷?</span></p>
 <p><span>A:<br/></span></p>
 <p>当谈到创作人的履历时，特别是那些与软件开发、写作、设计等相关的创作人，他们在履历中可能会突出以下方面与 Git 相关的内容：</p>
