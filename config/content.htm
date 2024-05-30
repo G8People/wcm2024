@@ -36,9 +36,14 @@
 <p dir="auto">password generator: <a href="https://mde.tw/cmsite/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/b92b16621dd0246c352cf13d6463b333/raw/0bfa669750aba3abe48554509bbd43d65b6e5c82/hashlib_password_generator.py">https://mde.tw/cmsite/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/b92b16621dd0246c352cf13d6463b333/raw/0bfa669750aba3abe48554509bbd43d65b6e5c82/hashlib_password_generator.py</a> </p>
 <p dir="auto"></p>
 <p dir="auto">for IPv6 only Ubuntu:<br/><br/>.ssh 目錄中的 config, 將 SSH session 名稱設為 github.com:<br/><br/>Host github.com<br/>User git<br/>Hostname github.com<br/>ProxyCommand /usr/bin/ncat --proxy p4.cycu.org:3128 --proxy-type http %h %p<br/><br/>for Replit:<br/><br/>.ssh 目錄中的 config, 將 SSH session 名稱設為 github.com:<br/><br/>Host github.com<br/>User git<br/>Hostname github.co<br/>#since Replit works for IPv4, therefore no ProxyCommand setting needed<br/>#ProxyCommand /usr/bin/ncat --proxy p4.cycu.org:3128 --proxy-type http %h %p</p>
-<h1 dir="auto">homework</h1>
+<h1>homework</h1>
 <h2>W2</h2>
-<h2>W3</h2>
+<p>在使用replit 近端或遠端，編輯維護網站，可用新的維護網站Codespaces進行維護</p>
+<p>1.可以跳過近端反鎖步驟，直接開啟動態網站編輯。</p>
+<p>2.幾乎與replit的操作系統一樣。(和其最近更新的動態網站連結亂碼)</p>
+<p>3.受限於這個只是給你試用的，所以有<span>每個月的使用時數上限</span>。</p>
+<p>以下連結為使用<span>Codespaces</span>編輯維護晚站後的靜態連結<a href="https://ren911308.github.io/wcm2024/content/index.htm">https://ren911308.github.io/wcm2024/content/index.htm</a></p>
+<p></p><h2>W3</h2>
 <h2>W4</h2>
 <h2>W5</h2>
 <h2>W6</h2>
@@ -115,10 +120,10 @@
 </div>
 <div class="mt-1 flex gap-3 empty:hidden juice:justify-end">A:</div>
 <div class="mt-1 flex gap-3 empty:hidden juice:justify-end">要在 Windows 上演示 Git 客户端与 Git 服务器，你可以按照以下步骤进行：<br/><br/>**设置 Git 服务器：**<br/><br/>1. **安装 Git：**首先，在你选择的 Windows 服务器上安装 Git。你可以从 Git 官方网站（https://git-scm.com/）下载并安装 Git for Windows。<br/><br/>2. **设置 Git 仓库：**选择一个目录作为 Git 仓库，并通过命令行进入该目录。<br/><br/>3. **初始化仓库：**使用以下命令初始化 Git 仓库：<br/><br/> ```<br/> git init --bare<br/> ```<br/><br/> 这将在选定目录中创建一个裸仓库，用于作为 Git 服务器。<br/><br/>4. **设置 SSH 访问（可选）：**如果你计划使用 SSH 进行访问和认证，你需要确保在服务器上配置了 SSH 服务，并在客户端生成 SSH 密钥对并将公钥添加到服务器上的授权文件中。<br/><br/>**设置 Git 客户端：**<br/><br/>1. **安装 Git：**在你选择的 Windows 客户端上安装 Git for Windows，同样可以从 Git 官方网站下载并安装。<br/><br/>2. **配置全局用户信息：**在命令行或 Git Bash 中，使用以下命令配置全局用户信息：<br/><br/> ```<br/> git config --global user.name "Your Name"<br/> git config --global user.email "your.email@example.com"<br/> ```<br/><br/> 这将设置全局的用户名和邮箱，用于在提交时标识作者信息。<br/><br/>3. **克隆仓库：**在你选择的目录中，使用以下命令克隆 Git 服务器上的仓库：<br/><br/> ```<br/> git clone username@server_ip:/path/to/repository<br/> ```<br/><br/> 其中 `username` 是 Git 服务器的用户名，`server_ip` 是服务器的 IP 地址，`/path/to/repository` 是服务器上仓库的路径。<br/><br/>4. **进行更改：**在克隆的本地仓库中进行更改，并使用以下命令提交更改：<br/><br/> ```<br/> git add .<br/> git commit -m "Commit message"<br/> ```<br/><br/>5. **推送更改：**将本地更改推送到 Git 服务器：<br/><br/> ```<br/> git push origin master<br/> ```<br/><br/> 这将把本地的 `master` 分支推送到远程仓库。<br/><br/>通过以上步骤，你就可以在 Windows 上演示 Git 客户端与 Git 服务器的基本使用。记得根据实际情况进行配置和调整，例如使用 HTTPS 或 SSH 访问，以及确保适当的权限和认证方式。</div>
-<h2 class="mt-1 flex gap-3 empty:hidden juice:justify-end">W7-W8</h2>
-<h2 class="mt-1 flex gap-3 empty:hidden juice:justify-end">W10</h2>
-<h2 class="mt-1 flex gap-3 empty:hidden juice:justify-end">W11</h2>
-<h2 class="mt-1 flex gap-3 empty:hidden juice:justify-end">W13</h2>
+<h2>W7-W8</h2>
+<h2>W10</h2>
+<h2>W11</h2>
+<h2>W13</h2>
 <p></p>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
