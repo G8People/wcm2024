@@ -142,16 +142,29 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">question1 << <a href='question1.html'>Previous</a> <a href='W7-W8.html'>Next</a> >> W7-W8<br /><h1>question2</h1>
-<h4>(1)</h4>
-<div class="flex flex-grow flex-col max-w-full">
-<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="user" data-message-id="aaa2da3e-e2dc-4704-a2ae-3bd54259198f" dir="auto">
-<div class="">假如要在 Windows 實際 demo git client 與 git server, 該如何進行?</div>
-</div>
-</div>
-<div class="mt-1 flex gap-3 empty:hidden juice:justify-end">A:</div>
-<div class="mt-1 flex gap-3 empty:hidden juice:justify-end">要在 Windows 上演示 Git 客户端与 Git 服务器，你可以按照以下步骤进行：<br/><br/>**设置 Git 服务器：**<br/><br/>1. **安装 Git：**首先，在你选择的 Windows 服务器上安装 Git。你可以从 Git 官方网站（https://git-scm.com/）下载并安装 Git for Windows。<br/><br/>2. **设置 Git 仓库：**选择一个目录作为 Git 仓库，并通过命令行进入该目录。<br/><br/>3. **初始化仓库：**使用以下命令初始化 Git 仓库：<br/><br/> ```<br/> git init --bare<br/> ```<br/><br/> 这将在选定目录中创建一个裸仓库，用于作为 Git 服务器。<br/><br/>4. **设置 SSH 访问（可选）：**如果你计划使用 SSH 进行访问和认证，你需要确保在服务器上配置了 SSH 服务，并在客户端生成 SSH 密钥对并将公钥添加到服务器上的授权文件中。<br/><br/>**设置 Git 客户端：**<br/><br/>1. **安装 Git：**在你选择的 Windows 客户端上安装 Git for Windows，同样可以从 Git 官方网站下载并安装。<br/><br/>2. **配置全局用户信息：**在命令行或 Git Bash 中，使用以下命令配置全局用户信息：<br/><br/> ```<br/> git config --global user.name "Your Name"<br/> git config --global user.email "your.email@example.com"<br/> ```<br/><br/> 这将设置全局的用户名和邮箱，用于在提交时标识作者信息。<br/><br/>3. **克隆仓库：**在你选择的目录中，使用以下命令克隆 Git 服务器上的仓库：<br/><br/> ```<br/> git clone username@server_ip:/path/to/repository<br/> ```<br/><br/> 其中 `username` 是 Git 服务器的用户名，`server_ip` 是服务器的 IP 地址，`/path/to/repository` 是服务器上仓库的路径。<br/><br/>4. **进行更改：**在克隆的本地仓库中进行更改，并使用以下命令提交更改：<br/><br/> ```<br/> git add .<br/> git commit -m "Commit message"<br/> ```<br/><br/>5. **推送更改：**将本地更改推送到 Git 服务器：<br/><br/> ```<br/> git push origin master<br/> ```<br/><br/> 这将把本地的 `master` 分支推送到远程仓库。<br/><br/>通过以上步骤，你就可以在 Windows 上演示 Git 客户端与 Git 服务器的基本使用。记得根据实际情况进行配置和调整，例如使用 HTTPS 或 SSH 访问，以及确保适当的权限和认证方式。</div>
-<br />question1 << <a href='question1.html'>Previous</a> <a href='W7-W8.html'>Next</a> >> W7-W8</div>
+    <div id="tipue_search_content">１.ＷＩＮＫ << <a href='１.ＷＩＮＫ.html'>Previous</a> <a href='３.建立分組倉儲.html'>Next</a> >> ３.建立分組倉儲<br /><h1>２.ＧＩＴ　ＯＲＤＥＲ</h1>
+<p><span>git add .</span><span> </span>(新增)</p>
+<p><span>git commit -m "說明字串"</span>  (提交及名稱)</p>
+<p><span>git </span><span>push (推送)</span></p>
+<p><span>git version (查詢目前所使用的 git 版本)</span></p>
+<p><span>git status (一般是用來檢查目前近端改版情況)</span></p>
+<p>若在遠端倉儲已經改版了，就必須先<span>git pull，將遠端資訊與自己的合併更新，才能在提交新的版本推送至倉儲。</span></p>
+<p><span>git pull=git fetch + git merge</span></p>
+<p><span>git submodule add 倉儲網址子目錄</span></p>
+<p><span>git clone --recurse-submodules (.git 指定目錄與否)</span></p>
+<p><span>token</span></p>
+<p><span>git config --global</span></p>
+<p>------------------------</p>
+<p>以下為其他其他指令</p>
+<p><span>git submodule update --init (抓下子模組)</span></p>
+<p><span>git log (檢視 Git 紀錄 Q鍵離開)</span></p>
+<p><span>ls -l (瀏覽)</span></p>
+<p><span>pwd (列出現在工作目錄)</span></p>
+<p><span>acp ("輸入" 直接上傳)</span></p>
+<p><span>dns (將英文名稱轉為數字IP 問server(伺服器)IP地址 DNS會先查詢自己資料庫)</span></p>
+<p><span>dir (顯示某個磁碟指定目錄下的全部或部分檔案目錄和子目錄)</span></p>
+<p><span>./b(代表執行、運行)(執行可執行檔)</span></p>
+<br />１.ＷＩＮＫ << <a href='１.ＷＩＮＫ.html'>Previous</a> <a href='３.建立分組倉儲.html'>Next</a> >> ３.建立分組倉儲</div>
 
     <!-- footer -->
       <div class="container">
