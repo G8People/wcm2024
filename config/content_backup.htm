@@ -44,8 +44,97 @@
 <p>3.受限於這個只是給你試用的，所以有<span>每個月的使用時數上限</span>。</p>
 <p>以下連結為使用<span>Codespaces</span>編輯維護晚站後的靜態連結<a href="https://ren911308.github.io/wcm2024/content/index.htm">https://ren911308.github.io/wcm2024/content/index.htm</a></p>
 <p></p><h2>W3</h2>
-<h2>W4</h2>
-<h2>W5</h2>
+<h3>１.ＷＩＮＫ</h3>
+<p><a href="https://www.debugmode.com/wink.html">https://www.debugmode.com/wink.html</a></p>
+<h3>２.ＧＩＴ　ＯＲＤＥＲ</h3>
+<p><span>git add .</span><span> </span>(新增)</p>
+<p><span>git commit -m "說明字串"</span>  (提交及名稱)</p>
+<p><span>git </span><span>push (推送)</span></p>
+<p><span>git version (查詢目前所使用的 git 版本)</span></p>
+<p><span>git status (一般是用來檢查目前近端改版情況)</span></p>
+<p>若在遠端倉儲已經改版了，就必須先<span>git pull，將遠端資訊與自己的合併更新，才能在提交新的版本推送至倉儲。</span></p>
+<p><span>git pull=git fetch + git merge</span></p>
+<p><span>git submodule add 倉儲網址子目錄</span></p>
+<p><span>git clone --recurse-submodules (.git 指定目錄與否)</span></p>
+<p><span>token</span></p>
+<p><span>git config --global</span></p>
+<p>------------------------</p>
+<p>以下為其他其他指令</p>
+<p><span>git submodule update --init (抓下子模組)</span></p>
+<p><span>git log (檢視 Git 紀錄 Q鍵離開)</span></p>
+<p><span>ls -l (瀏覽)</span></p>
+<p><span>pwd (列出現在工作目錄)</span></p>
+<p><span>acp ("輸入" 直接上傳)</span></p>
+<p><span>dns (將英文名稱轉為數字IP 問server(伺服器)IP地址 DNS會先查詢自己資料庫)</span></p>
+<p><span>dir (顯示某個磁碟指定目錄下的全部或部分檔案目錄和子目錄)</span></p>
+<p><span>./b(代表執行、運行)(執行可執行檔)</span></p>
+<h3>３.建立分組倉儲</h3>
+<p>利用Codespaces建立分組倉儲建立個人子模組</p>
+<p>另用終端機打出指令</p>
+<p><span>git status</span></p>
+<p><span>ls -l</span></p>
+<p><span>clear</span></p>
+<p><span>git submodule add 自己倉儲網址.git空格+學號</span></p>
+<p><span>git add .</span></p>
+<p><span>git commit -m "add 學號 submodule"</span></p>
+<p><span>git push</span></p>
+<p>就可以將自己的個人子模組加入到分組倉儲</p>
+<p></p><h2>W4</h2>
+<p>有關建立網站:<span>網站指的是 Web site針對網頁瀏覽器檢視的內容加以管理，利用 Github 所提供的 Pages 功能來建立網頁進行管理。</span></p>
+<p><span>Replit靜態網站檢視:若要執行動態網站，可以在 Shell 執行 python3 main.py 或者使用 Replit 的 Run 按鍵， Shell 執行 python3 main2.py 就可以執行倉儲內的靜態網站檢視。</span></p>
+<p><span>Replit建立分組倉儲權限:</span></p>
+<p>分組網站 import 到 Replit, 必須自行在 /home/runner/.ssh 目錄下建立 id_rsa 與 config (id_rsa.pub 必須登錄到 Github 對應帳號), 其中的 config 內容為:</p>
+<div>
+<div class="syntaxhighlighter jscript" id="highlighter_355090">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="jscript plain">Host github.com</code></div>
+<div class="line number2 index1 alt1"><code class="jscript plain">User git</code></div>
+<div class="line number3 index2 alt2"><code class="jscript plain">Hostname github.com</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>ssh.py 程式內容如下:</p>
+<div>
+<div class="syntaxhighlighter python" id="highlighter_462850">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="gutter">
+<div class="line number1 index0 alt2">1</div>
+<div class="line number2 index1 alt1">2</div>
+<div class="line number3 index2 alt2">3</div>
+<div class="line number4 index3 alt1">4</div>
+<div class="line number5 index4 alt2">5</div>
+<div class="line number6 index5 alt1">6</div>
+</td>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="python keyword">import</code> <code class="python plain">os</code></div>
+<div class="line number2 index1 alt1"><code class="python keyword">if</code> <code class="python keyword">not</code> <code class="python plain">os.path.exists(</code><code class="python string">"/home/runner/.ssh"</code><code class="python plain">): </code></div>
+<div class="line number3 index2 alt2"><code class="python spaces">    </code><code class="python plain">os.makedirs(</code><code class="python string">"/home/runner/.ssh"</code><code class="python plain">) </code></div>
+<div class="line number4 index3 alt1"><code class="python plain">os.system(</code><code class="python string">"mv ./downloads/id_rsa.txt /home/runner/.ssh/id_rsa"</code><code class="python plain">)</code></div>
+<div class="line number5 index4 alt2"><code class="python plain">os.system(</code><code class="python string">"mv ./downloads/config.txt /home/runner/.ssh/config"</code><code class="python plain">)</code></div>
+<div class="line number6 index5 alt1"><code class="python plain">os.system(</code><code class="python string">"chmod og-rwx /home/runner/.ssh/id_rsa"</code><code class="python plain">)</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><h2>W5</h2>
 <h2>W6</h2>
 <h3>question1</h3>
 <h4>(1)</h4>
