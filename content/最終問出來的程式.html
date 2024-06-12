@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H3">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,71 +142,8 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">W6 << <a href='W6.html'>Previous</a> <a href='question2.html'>Next</a> >> question2<br /><h1>question1</h1>
-<h4>(1)</h4>
-<div class="flex flex-grow flex-col max-w-full">
-<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="user" data-message-id="aaa2da3e-e2dc-4704-a2ae-3bd54259198f" dir="auto">
-<div class="">假如要在 Windows 實際 demo git client 與 git server, 該如何進行?</div>
-</div>
-</div>
-<p>A:</p>
-<p>要在 Windows 上演示 Git 客户端与 Git 服务器，你可以按照以下步骤进行：</p>
-<p>**设置 Git 服务器：**</p>
-<p>1. **安装 Git：**首先，在你选择的 Windows 服务器上安装 Git。你可以从 Git 官方网站（https://git-scm.com/）下载并安装 Git for Windows。</p>
-<p>2. **设置 Git 仓库：**选择一个目录作为 Git 仓库，并通过命令行进入该目录。</p>
-<p>3. **初始化仓库：**使用以下命令初始化 Git 仓库：</p>
-<p>```<br/> git init --bare<br/> ```</p>
-<p>这将在选定目录中创建一个裸仓库，用于作为 Git 服务器。</p>
-<p>4. **设置 SSH 访问（可选）：**如果你计划使用 SSH 进行访问和认证，你需要确保在服务器上配置了 SSH 服务，并在客户端生成 SSH 密钥对并将公钥添加到服务器上的授权文件中。</p>
-<p>**设置 Git 客户端：**</p>
-<p>1. **安装 Git：**在你选择的 Windows 客户端上安装 Git for Windows，同样可以从 Git 官方网站下载并安装。</p>
-<p>2. **配置全局用户信息：**在命令行或 Git Bash 中，使用以下命令配置全局用户信息：</p>
-<p>```<br/> git config --global user.name "Your Name"<br/> git config --global user.email "your.email@example.com"<br/> ```</p>
-<p>这将设置全局的用户名和邮箱，用于在提交时标识作者信息。</p>
-<p>3. **克隆仓库：**在你选择的目录中，使用以下命令克隆 Git 服务器上的仓库：</p>
-<p>```<br/> git clone username@server_ip:/path/to/repository<br/> ```</p>
-<p>其中 `username` 是 Git 服务器的用户名，`server_ip` 是服务器的 IP 地址，`/path/to/repository` 是服务器上仓库的路径。</p>
-<p>4. **进行更改：**在克隆的本地仓库中进行更改，并使用以下命令提交更改：</p>
-<p>```<br/> git add .<br/> git commit -m "Commit message"<br/> ```</p>
-<p>5. **推送更改：**将本地更改推送到 Git 服务器：</p>
-<p>```<br/> git push origin master<br/> ```</p>
-<p>这将把本地的 `master` 分支推送到远程仓库。</p>
-<p>通过以上步骤，你就可以在 Windows 上演示 Git 客户端与 Git 服务器的基本使用。记得根据实际情况进行配置和调整，例如使用 HTTPS 或 SSH 访问，以及确保适当的权限和认证方式。</p>
-<h4>(2)</h4>
-<p><span>git創作人的相關履歷?</span></p>
-<p><span>A:<br/></span></p>
-<p>当谈到创作人的履历时，特别是那些与软件开发、写作、设计等相关的创作人，他们在履历中可能会突出以下方面与 Git 相关的内容：</p>
-<p>1. **版本控制经验**：在履历中强调对版本控制系统（如 Git）的熟练掌握，包括对分支管理、合并冲突解决、提交历史管理等方面的经验。这展示了创作人对于有效管理和追踪作品变更历史的能力。</p>
-<p>2. **项目协作经历**：描述在团队中使用 Git 进行协作的经验。这可以包括与团队成员合作解决问题、审核代码或文档、参与项目管理等方面的经历。突出自己在团队中的贡献，以及如何利用 Git 实现高效的团队协作。</p>
-<p>3. **个人项目管理**：展示如何利用 Git 管理个人项目的经验。包括如何组织文件结构、使用分支管理不同功能或版本、定期进行提交和推送等。这表明创作人具备独立开展项目工作并有效管理项目的能力。</p>
-<p>4. **技能和工具**：在技能部分提及熟练掌握 Git 及相关工具的经验，如 GitHub、GitLab 等。这表明创作人具备利用现代工具和技术提高工作效率和质量的能力。</p>
-<p>5. **开源贡献**：如果有的话，可以提及自己在开源项目中的贡献经历。这可能包括提交代码、修复错误、撰写文档等，展示了创作人对于开源社区的积极参与和贡献精神。</p>
-<p>综上所述，创作人的履历中可以通过突出与 Git 相关的经验和技能，展示自己在版本控制、团队协作和项目管理方面的能力，从而提升自己在相关领域的竞争力和可信度。</p>
-<h4>(3)</h4>
-<p><span>如何用git解決softlatheV5的問題?</span></p>
-<p><span>A:</span></p>
-<p>要使用 Git 解决 SoftLatheV5（假设这是一个软件项目）的问题，可以遵循以下步骤：</p>
-<p>1. **创建 Git 仓库**：首先，在项目目录中初始化一个 Git 仓库。可以使用以下命令：</p>
-<p>```<br/> git init<br/> ```</p>
-<p>2. **添加文件**：将 SoftLatheV5 项目的文件添加到 Git 仓库中，可以使用以下命令：</p>
-<p>```<br/> git add .<br/> ```</p>
-<p>这将添加所有文件到暂存区。</p>
-<p>3. **提交更改**：一旦添加了文件，就可以将它们提交到仓库中，可以使用以下命令：</p>
-<p>```<br/> git commit -m "Initial commit"<br/> ```</p>
-<p>这将提交更改并创建一个初始提交。</p>
-<p>4. **分支管理**：如果 SoftLatheV5 有多个功能或修复要进行，可以使用分支进行管理。可以使用以下命令创建新分支：</p>
-<p>```<br/> git checkout -b new-feature<br/> ```</p>
-<p>在新分支上进行开发，完成后再合并回主分支。</p>
-<p>5. **远程仓库**：如果需要与团队协作或备份代码，可以将本地仓库连接到远程仓库，例如 GitHub、GitLab 或 Bitbucket。可以使用以下命令添加远程仓库：</p>
-<p>```<br/> git remote add origin &lt;remote_repository_URL&gt;<br/> ```</p>
-<p>然后将本地更改推送到远程仓库：</p>
-<p>```<br/> git push -u origin master<br/> ```</p>
-<p>6. **解决冲突**：如果多人同时修改了同一部分代码，可能会发生冲突。在这种情况下，需要解决冲突并合并更改。可以使用 Git 提供的合并工具或手动编辑文件来解决冲突。</p>
-<p>7. **版本控制**：使用 Git 可以轻松地回滚到之前的版本，如果某个版本出现问题，可以使用以下命令回滚：</p>
-<p>```<br/> git reset --hard &lt;commit_SHA&gt;<br/> ```</p>
-<p>其中 `&lt;commit_SHA&gt;` 是要回滚到的提交的哈希值。</p>
-<p>通过以上步骤，你可以使用 Git 来管理 SoftLatheV5 项目，并且更加高效地进行开发、协作和问题解决。</p>
-<br />W6 << <a href='W6.html'>Previous</a> <a href='question2.html'>Next</a> >> question2</div>
+    <div id="tipue_search_content">期末專案 << <a href='期末專案.html'>Previous</a> <a href='app.py.html'>Next</a> >> app.py<br /><h1>最終問出來的程式</h1>
+<br />期末專案 << <a href='期末專案.html'>Previous</a> <a href='app.py.html'>Next</a> >> app.py</div>
 
     <!-- footer -->
       <div class="container">

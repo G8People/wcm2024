@@ -293,7 +293,65 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 <p>後來就是處理問一些細節上的問題，例如按下空白建開始等等</p>
 <p><img alt="" height="233" src="/images/4.png" width="400"/></p>
 <p><img alt="" height="239" src="/images/5.png" width="400"/></p>
-<p><img alt="" height="247" src="/images/6.png" width="400"/></p><h1>Brython</h1>
+<p><img alt="" height="247" src="/images/6.png" width="400"/></p>
+<h2><strong>最終問出來的程式</strong></h2>
+<h3><strong>app.py</strong></h3>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, render_template, jsonify, request
+
+app = Flask(__name__)
+
+# 初始化棋盘
+board = [['' for _ in range(15)] for _ in range(15)]
+current_player = 'X'
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/move', methods=['POST'])
+def move():
+    global current_player
+    data = request.get_json()
+    x, y = data['x'], data['y']
+    if board[x][y] == '':
+        board[x][y] = current_player
+        winner = check_winner(x, y)
+        if winner:
+            return jsonify({'board': board, 'winner': winner})
+        current_player = 'O' if current_player == 'X' else 'X'
+        return jsonify({'board': board, 'winner': None})
+    return jsonify({'error': 'Invalid move'}), 400
+
+def check_winner(x, y):
+    def check_direction(dx, dy):
+        count = 0
+        for i in range(-4, 5):
+            nx, ny = x + i * dx, y + i * dy
+            if 0 &lt;= nx &lt; 15 and 0 &lt;= ny &lt; 15 and board[nx][ny] == current_player:
+                count += 1
+                if count == 5:
+                    return True
+            else:
+                count = 0
+        return False
+
+    directions = [(1, 0), (0, 1), (1, 1), (1, -1)]
+    for dx, dy in directions:
+        if check_direction(dx, dy):
+            return current_player
+    return None
+
+@app.route('/reset', methods=['POST'])
+def reset():
+    global board, current_player
+    board = [['' for _ in range(15)] for _ in range(15)]
+    current_player = 'X'
+    return jsonify({'board': board})
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=5000)
+</pre>
+<p></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
