@@ -294,63 +294,260 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 <p><img alt="" height="233" src="/images/4.png" width="400"/></p>
 <p><img alt="" height="239" src="/images/5.png" width="400"/></p>
 <p><img alt="" height="247" src="/images/6.png" width="400"/></p>
-<h2><strong>最終問出來的程式</strong></h2>
-<h3><strong>app.py</strong></h3>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask, render_template, jsonify, request
+<h2>最終問出來的程式</h2>
+<h3>app.py</h3>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;五子棋&lt;/title&gt;
+    &lt;style&gt;
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .piece {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            margin: auto;
+        }
+        .X {
+            background-color: black;
+        }
+        .O {
+            background-color: white;
+            border: 1px solid #000;
+        }
+        #message {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table id="board"&gt;&lt;/table&gt;
+    &lt;div id="message"&gt;点击鼠标左键开始游戏&lt;/div&gt;
+    &lt;script&gt;
+        const boardSize = 15;
+        let currentPlayer = 'X';
+        let board = Array.from({ length: boardSize }, () =&gt; Array(boardSize).fill(''));
+        let gameStarted = false;
 
-app = Flask(__name__)
+        function renderBoard() {
+            const boardElem = document.getElementById('board');
+            boardElem.innerHTML = '';
+            for (let i = 0; i &lt; boardSize; i++) {
+                const row = document.createElement('tr');
+                for (let j = 0; j &lt; boardSize; j++) {
+                    const cell = document.createElement('td');
+                    if (board[i][j] !== '') {
+                        const piece = document.createElement('div');
+                        piece.className = `piece ${board[i][j]}`;
+                        cell.appendChild(piece);
+                    }
+                    cell.addEventListener('click', () =&gt; makeMove(i, j));
+                    row.appendChild(cell);
+                }
+                boardElem.appendChild(row);
+            }
+        }
 
-# 初始化棋盘
-board = [['' for _ in range(15)] for _ in range(15)]
-current_player = 'X'
+        function makeMove(x, y) {
+            if (!gameStarted) return;
+            fetch('/move', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ x, y })
+            })
+            .then(response =&gt; response.json())
+            .then(data =&gt; {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    board = data.board;
+                    renderBoard();
+                    if (data.winner) {
+                        document.getElementById('message').textContent = `${data.winner} wins! 游戏结束，按下空白键重新开始`;
+                        gameStarted = false;
+                        document.addEventListener('keydown', handleRestart);
+                    }
+                }
+            });
+        }
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+        function startGame() {
+            gameStarted = true;
+            document.getElementById('message').textContent = '游戏已开始';
+            document.removeEventListener('click', startGame);
+        }
 
-@app.route('/move', methods=['POST'])
-def move():
-    global current_player
-    data = request.get_json()
-    x, y = data['x'], data['y']
-    if board[x][y] == '':
-        board[x][y] = current_player
-        winner = check_winner(x, y)
-        if winner:
-            return jsonify({'board': board, 'winner': winner})
-        current_player = 'O' if current_player == 'X' else 'X'
-        return jsonify({'board': board, 'winner': None})
-    return jsonify({'error': 'Invalid move'}), 400
+        function resetGame() {
+            fetch('/reset', {
+                method: 'POST'
+            })
+            .then(response =&gt; response.json())
+            .then(data =&gt; {
+                board = data.board;
+                renderBoard();
+                document.getElementById('message').textContent = '点击鼠标左键开始游戏';
+                document.addEventListener('click', startGame);
+            });
+        }
 
-def check_winner(x, y):
-    def check_direction(dx, dy):
-        count = 0
-        for i in range(-4, 5):
-            nx, ny = x + i * dx, y + i * dy
-            if 0 &lt;= nx &lt; 15 and 0 &lt;= ny &lt; 15 and board[nx][ny] == current_player:
-                count += 1
-                if count == 5:
-                    return True
-            else:
-                count = 0
-        return False
+        function handleRestart(event) {
+            if (event.code === 'Space') {
+                resetGame();
+                document.removeEventListener('keydown', handleRestart);
+            }
+        }
 
-    directions = [(1, 0), (0, 1), (1, 1), (1, -1)]
-    for dx, dy in directions:
-        if check_direction(dx, dy):
-            return current_player
-    return None
+        document.addEventListener('click', startGame);
 
-@app.route('/reset', methods=['POST'])
-def reset():
-    global board, current_player
-    board = [['' for _ in range(15)] for _ in range(15)]
-    current_player = 'X'
-    return jsonify({'board': board})
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+        renderBoard();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </pre>
+<h3>templates</h3>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;五子棋&lt;/title&gt;
+    &lt;style&gt;
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        td {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .piece {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            margin: auto;
+        }
+        .X {
+            background-color: black;
+        }
+        .O {
+            background-color: white;
+            border: 1px solid #000;
+        }
+        #message {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;table id="board"&gt;&lt;/table&gt;
+    &lt;div id="message"&gt;点击鼠标左键开始游戏&lt;/div&gt;
+    &lt;script&gt;
+        const boardSize = 15;
+        let currentPlayer = 'X';
+        let board = Array.from({ length: boardSize }, () =&gt; Array(boardSize).fill(''));
+        let gameStarted = false;
+
+        function renderBoard() {
+            const boardElem = document.getElementById('board');
+            boardElem.innerHTML = '';
+            for (let i = 0; i &lt; boardSize; i++) {
+                const row = document.createElement('tr');
+                for (let j = 0; j &lt; boardSize; j++) {
+                    const cell = document.createElement('td');
+                    if (board[i][j] !== '') {
+                        const piece = document.createElement('div');
+                        piece.className = `piece ${board[i][j]}`;
+                        cell.appendChild(piece);
+                    }
+                    cell.addEventListener('click', () =&gt; makeMove(i, j));
+                    row.appendChild(cell);
+                }
+                boardElem.appendChild(row);
+            }
+        }
+
+        function makeMove(x, y) {
+            if (!gameStarted) return;
+            fetch('/move', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ x, y })
+            })
+            .then(response =&gt; response.json())
+            .then(data =&gt; {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    board = data.board;
+                    renderBoard();
+                    if (data.winner) {
+                        document.getElementById('message').textContent = `${data.winner} wins! 游戏结束，按下空白键重新开始`;
+                        gameStarted = false;
+                        document.addEventListener('keydown', handleRestart);
+                    }
+                }
+            });
+        }
+
+        function startGame() {
+            gameStarted = true;
+            document.getElementById('message').textContent = '游戏已开始';
+            document.removeEventListener('click', startGame);
+        }
+
+        function resetGame() {
+            fetch('/reset', {
+                method: 'POST'
+            })
+            .then(response =&gt; response.json())
+            .then(data =&gt; {
+                board = data.board;
+                renderBoard();
+                document.getElementById('message').textContent = '点击鼠标左键开始游戏';
+                document.addEventListener('click', startGame);
+            });
+        }
+
+        function handleRestart(event) {
+            if (event.code === 'Space') {
+                resetGame();
+                document.removeEventListener('keydown', handleRestart);
+            }
+        }
+
+        document.addEventListener('click', startGame);
+
+        renderBoard();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p><br/><br/></p>
 <p></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
