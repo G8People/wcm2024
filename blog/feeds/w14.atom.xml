@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w14</title><link href="./" rel="alternate"></link><link href="./feeds/w14.atom.xml" rel="self"></link><id>./</id><updated>2024-06-14T13:00:00+08:00</updated><entry><title>2024 w14上課內容</title><link href="./2024-Spring-w14-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T13:00:00+08:00</published><updated>2024-06-14T09:45:48+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w14-blog-tutorial.html</id><summary type="html">&lt;p&gt;第十四週，各組一起參與單機猜數字遊戲&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;第十四週，各組一起參與單機猜數字遊戲&lt;/p&gt;
+
+
+&lt;h1&gt;啟動並執行網際猜數字遊戲&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=fjheqtLYATg"&gt;說明影片&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;有關可攜程式系統的批次檔案說明&lt;/h1&gt;
+&lt;p&gt;如何針對不同的 Python 版本修改啟動批次檔案, 並利用 AI 取得各指令的詳細說明
+以下影片說明如何在近端電腦執行猜數字遊戲伺服器程式&lt;a href="https://www.youtube.com/watch?v=fjheqtLYATg"&gt;說明影片&lt;/a&gt;&lt;/p&gt;</content><category term="w14"></category><category term="網誌編寫"></category></entry></feed>
