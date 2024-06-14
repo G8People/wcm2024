@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2024-06-14T13:06:00+08:00</updated><entry><title>2024 w6上課內容</title><link href="./2024-Spring-w6-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T13:06:00+08:00</published><updated>2024-06-14T08:42:04+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w6-blog-tutorial.html</id><summary type="html">&lt;p&gt;第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2024-06-14T13:06:00+08:00</updated><entry><title>2024 w6上課內容</title><link href="./2024-Spring-w6-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T13:06:00+08:00</published><updated>2024-06-14T08:43:16+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w6-blog-tutorial.html</id><summary type="html">&lt;p&gt;第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;第六週課程, 說明如何透過與 ChatGPT 的對話, 了解有關 git 在不同專業領域的應用方法.&lt;/p&gt;
 
 
 &lt;h1&gt;Git 歷史與希望解決的問題&lt;/h1&gt;
 &lt;p&gt;問ChatGPT問題，了解到Git的來龍去脈，以及Git可以解決甚麼問題
-EX:假如要在 Windows 實際 demo git client 與 git server, 該如何進行
-EX:git創作人的相關履歷?
-EX:如何用git解決softlatheV5的問題?&lt;/p&gt;</content><category term="w6"></category><category term="網誌編寫"></category></entry><entry><title>2024 w5上課內容</title><link href="./2024-Spring-w5-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T13:05:00+08:00</published><updated>2024-06-14T08:32:33+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w5-blog-tutorial.html</id><summary type="html">&lt;p&gt;第五週網際內容管理上課內容，以iframe嵌入先前學的教學影片，並摘要個影片內容。&lt;/p&gt;
+EX:假如要在 Windows 實際 demo git client 與 git server, 該如何進行 &lt;/p&gt;
+&lt;p&gt;EX:git創作人的相關履歷?&lt;/p&gt;
+&lt;p&gt;EX:如何用git解決softlatheV5的問題?&lt;/p&gt;</content><category term="w6"></category><category term="網誌編寫"></category></entry><entry><title>2024 w5上課內容</title><link href="./2024-Spring-w5-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T13:05:00+08:00</published><updated>2024-06-14T08:32:33+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w5-blog-tutorial.html</id><summary type="html">&lt;p&gt;第五週網際內容管理上課內容，以iframe嵌入先前學的教學影片，並摘要個影片內容。&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;第五週網際內容管理上課內容，以iframe嵌入先前學的教學影片，並摘要個影片內容。&lt;/p&gt;
 
 
