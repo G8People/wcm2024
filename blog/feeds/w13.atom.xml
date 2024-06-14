@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w13</title><link href="./" rel="alternate"></link><link href="./feeds/w13.atom.xml" rel="self"></link><id>./</id><updated>2024-06-14T13:13:00+08:00</updated><entry><title>2024 w13上課內容</title><link href="./2024-Spring-w13-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T13:13:00+08:00</published><updated>2024-06-14T09:36:42+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w13-blog-tutorial.html</id><summary type="html">&lt;p&gt;第十三週, 從單機猜數字遊戲與 AI 應用談起&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;第十三週, 從單機猜數字遊戲與 AI 應用談起&lt;/p&gt;
+
+
+&lt;h1&gt;看看 Linux&lt;/h1&gt;
+&lt;p&gt;在 Linux 設定全域 Proxy 伺服器的位置, 可以是 /etc/environment 檔案中的:&lt;/p&gt;
+&lt;p&gt;http_proxy="http://your_proxy_server:port" &lt;/p&gt;
+&lt;p&gt;https_proxy="http://your_proxy_server:port"&lt;/p&gt;
+&lt;h1&gt;猜猜看遊戲&lt;/h1&gt;
+&lt;p&gt;guess_game.7z 是在 AI 輔助下, 將簡單的單人 Brython 線上猜數字遊戲 轉化為可以多人同場比賽猜數字的線上遊戲.&lt;/p&gt;</content><category term="w13"></category><category term="網誌編寫"></category></entry></feed>
