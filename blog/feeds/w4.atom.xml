@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>網際內容管理系統 - w4</title><link href="./" rel="alternate"></link><link href="./feeds/w4.atom.xml" rel="self"></link><id>./</id><updated>2024-06-14T13:04:00+08:00</updated><entry><title>2024 w4上課內容</title><link href="./2024-Spring-w4-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T13:04:00+08:00</published><updated>2024-06-14T08:11:42+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w4-blog-tutorial.html</id><summary type="html">&lt;p&gt;四技 WCM 第四週課程, 複習前三週的課程內容, 並且介紹 git 與 cmsimde 的相關用法。&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;四技 WCM 第四週課程, 複習前三週的課程內容, 並且介紹 git 與 cmsimde 的相關用法。&lt;/p&gt;
+
+
+&lt;h1&gt;Replit 建立分組倉儲權限&lt;/h1&gt;
+&lt;p&gt;由於 Replit 上的免費帳號僅允許與一個 Github 帳號對應, 因此若將分組網站 import 到 Replit, 必須自行在 /home/runner/.ssh 目錄下建立 id_rsa 與 config (id_rsa.pub 必須登錄到 Github 對應帳號)&lt;/p&gt;
+&lt;h1&gt;Replit 靜態網站檢視&lt;/h1&gt;
+&lt;p&gt;下載 main2.txt 與 static.txt, 其中包含 main2.py 與 static.py, 只要在 Shell 執行 python3 main2.py 就可以執行倉儲內的靜態網站檢視. 另一方面, 若要取消先前執行 python3 main2.py, 只需要在 Shell 頁面按下 ctrl + c, c 代表 cancle 也就是取消. 然後若要執行動態網站，可以在 Shell 執行 python3 main.py 或者使用 Replit 的 Run 按鍵.&lt;/p&gt;</content><category term="w4"></category><category term="網誌編寫"></category></entry></feed>
